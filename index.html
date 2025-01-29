@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Cute Penguin</title>
+</head>
+<body>
+    <hgroup>
+        <h1>I'm A Cute Penguin</h1>
+        <p>Using WebSocket example...</p>
+    </hgroup>
+
+    <script>
+        const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
+        let ws = new WebSocket(`${protocol}://${window.location.host}`);
+
+        ws.addEventListener('message', e => {
+            console.log(event.data);
+        });
+    </script>
+</body>
+</html>
